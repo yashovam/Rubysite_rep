@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+        <link rel="stylesheet" href="9.css" />
+		<link rel="stylesheet" href="popup.css" />
+        <link rel="stylesheet" href="/gallery.css" />
+      
+		
+        <script src="slide.js"></script>
+        <script src="prod.js"></script>
+		<script src="im_zoom.js" type="text/javascript"></script>
+        
+        <title>PurelyNaturalRubies</title>
+        
+        <!-- PyScript CSS 
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.1/core.css">
+        This script tag bootstraps PyScript
+        <script type="module" src="https://pyscript.net/releases/2024.5.1/core.js"></script>
+        <py-env>
+            - paths:
+                - gems/ruby_shop.txt
+
+
+			</py-env>
+            <div class="jewelbanner">
+                
+                <button class="orderjew" href="jewelry.html" >
+                    -]|[- ORDER CUSTOM JEWELRY -]|[-
+                </button>
+				<img src="images/hdr.jpg" alt="" />
+            </div>
+
+         -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Red+Hat+Display:ital,wght@0,300;1,300&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet" />
+    </head>
+    
+    <body>
+        
+		<script>
+			
+			window.SnipcartSettings = {
+			publicApiKey: "YOUR_API_KEY",
+			loadStrategy: "on-user-interaction",
+			currency: "cad",
+			modalStyle: "side",
+		  };
+
+		  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+		</script>
+		
+        <nav>
+            <img class="logo" src="images/l.png" alt="L" />
+            <a href="index.html">HOME</a>
+            <a href="store.html" style="color: #ffe8c8">SHOP</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+
+        <img class="hdr" src="images/hdr.jpg" alt="Gem" />
+
+        <div id="view_gem"></div>
+        
+        
+        <br>
+		<br>
+ 
+        <div class="product"> 
+
+            <div id="mySidebar" class="sidebar">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                  
+				
+                <div class="toggle_help" >
+					
+					
+                    <span style='font-size: 1em;'> -]|[- Sort by -]|[-</span>
+                    <p class="help">
+						The most recently applied filter is the most prioritized.</p>
+                </div>
+				<br>
+			
+                <div id="f_pri">
+                    <input type="range" min="0" max="9000" value="9000" class="fprice" onchange="updatePrice(this.value)">
+                    
+                    <p>Max Price: <span id="f_pri_m"></span></p>
+                </div>
+
+                <div id='f_car' >Carat
+					<img src='res/ai/rubyfl2.png' style="height:3.6vw; margin-bottom: -1.3vw; border:solid ; border-radius: 50%; border-block-color: rgba(255, 0, 0, 0); " alt=''>
+				</div>
+
+                <div id='f_cut'>Cut
+                    <select>
+                        <option value="cut1">Cut 1</option>
+                        <option value="cut2">Cut 2</option>
+                        <option value="cut3">Cut 3</option>
+                    </select>
+                </div>
+
+                <div id='f_cla'>Clarity</div>
+
+                <div id="f_col">Color</div>
+
+                <div id="f_sil">Silk</div>
+                
+                <br>
+                <div id="f_eme">Emerald</div>
+
+                <div id="f_cor">Coral</div>
+
+				<div id="search">
+					Search
+                    <form class="search" action="/search" method="GET">
+                        <input type="text" name="query" placeholder="Search..." />
+                        <button type="submit">Search</button>
+                    </form>
+				</div>
+
+                <div id="submit">Submit</div>
+
+                <br>
+
+                <div id="reset">Reset</div>
+
+
+            </div>
+                
+			<br>
+            <script type="text/javascript">
+
+
+            </script>
+            <div>
+				
+                <button class="openbtn" onclick="openNav()">
+                    &#9776; Filters -]|[-
+                </button>
+            </div> 
+			<br>
+			<br>
+			<br>
+			
+            
+			<div>
+				<table id="redfir" ><tr><td></td><td></td></tr></table>
+				<script src="TEST.js" type="text/javascript"></script>
+				<!-- <script src="im_zoom.js" type="text/javascript"></script> --> 
+			</div>
+		       		
+			<br>
+			<br>
+			<br>
+			
+
+        </div>
+		
+
+        <section class="product">
+            <h2 class="product-category">JEWELRY</h2>
+            <button class="pre-btn">
+                <img src="images/arrow.png" alt="" />
+            </button>
+            <button class="nxt-btn">
+                <img src="images/arrow.png" alt="" />
+            </button>
+            <div class="product-container">
+               
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                            <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>                
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="res/ai/Default_flower_petals_made_of_emerald_top_view_detailed_0.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>                
+
+                <script>
+                    handleProductContainers();
+                </script>
+                </div>
+    
+        </section>    
+
+        <br>
+
+        <section class="product">
+            <h2 class="product-category">CATEGORY</h2>
+            <button class="pre-btn">
+                <img src="images/arrow.png" alt="" />
+            </button>
+            <button class="nxt-btn">
+                <img src="images/arrow.png" alt="" />
+            </button>
+            <div class="product-container">
+               
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                            <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>                
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href='about.html' >
+                    <div class="product-image">
+                        <img
+                            src="images/card1.jpg"
+                            class="product-thumb"
+                            alt="" />
+                        <div
+                            onclick="location.href='gems/1.html'"
+                            class="card-btn">
+                            View Gem
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="product-info">
+                        <h2 class="product-brand">GEM NAME</h2>
+                        <p class="product-short-description">
+                            Details , Quality, Cut
+                        </p>
+                        <span class="price">$20</span>
+                    </div>
+                </div>                
+
+                <script>
+                    handleProductContainers();
+                </script>
+                </div>
+                
+        </section>  		
+    
+        
+        
+            <br>
+        <div></div>
+            <br>
+       
+
+    </body>
+
+</html>
