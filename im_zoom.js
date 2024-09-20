@@ -1,4 +1,4 @@
-/*    */
+/* ZOOM FEATURE   */
 const scaleUp = (image) => {
 	
 	const scale = parseFloat(image.getAttribute("scaler"));

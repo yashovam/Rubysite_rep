@@ -20,43 +20,6 @@ var filters = [];
 
 /* >-----------------------------------<><><><><> Functions <><><><><>-----------------------------------< */
 
-/*
-			<input type="radio" name="slide_switch" id="id${nu}" />	
-				
-				<label for="id${nu}">
-				<img src="${imm}" />
-				</label>
-<img src="${imm}" id='slimg' class='sl_img' />
-
-<div class="mySlides fade">
-
-				<label for="id${nu}">
-				<img src="${imm}" class='sl_l' />
-				</label>
-				
-				id='slimg' class='slimg'
-
-
-
-
-
-				<div class='mySlides' >
-
-				<input type="radio" name="slide_switch" id="id${nu}" />	
-				
-				<span class="demo" onclick="currentSlide(${nu})"></span>
-
-				<img src="${imm}"  style="width:90%" />
-
-				<div class="text"> ]|${nu}|[ </div>
-				</div>
-
-				</div>
-
-
-*/
-
-
 function im_list(liist) {
 	
 	let imgal = '';
@@ -460,18 +423,4 @@ function updatePrice(value) {
 function x_gem() {
 	document.getElementById('view_gem').innerHTML = '';
 }
-
-/* >-----------------------------------<><><><><> 
- * 
- * 
-
-	function v_gem() {
-
-		document.getElementById('view_gem').innerHTML = '' ;
-	}
- * 
- * 
- * <><><><><>-----------------------------------< */
-
-
 
