@@ -31,7 +31,6 @@ nav img {
 	z-index: 99;
 }
 
-
 nav a {
 	margin-left: 1vw;
 }
@@ -52,10 +51,51 @@ nav a {
 	width: 100%;
 }
 
+/* IMAGE CAROUSEL */
 
+.carousel-container {
+	overflow:visible;
+	width: 52%;
+	position: relative;
+	border-radius: 1%;
+	box-shadow: 3px 3px 36px rgba(0, 0, 0, 0.5);
+}
 
+.carousel {
+	display: flex;
+	flex-wrap: nowrap;
+	animation: scroll 9s ease-in-out infinite;
+}
 
+.product-im9 {
+	flex: 0 0 auto;
+	width: 100%;
+	height: auto;
+	z-index: 97;
+	transition:
+		transform 0.3s ease,
+		width 0.3s ease;
+}
 
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.carousel:hover {
+	animation-play-state: paused;
+}
+
+.product-im9:hover {
+	transform: scale(2.5);
+	z-index: 142;
+	position: relative;
+	width: 150%;
+}
 
 /* ##############################################################<_<>_>######################################################### */
 .post {
@@ -113,7 +153,6 @@ nav a {
 
 /*          TABLE AND FILTERS   background: linear-gradient(177.13deg, #cd2323 0%, #a40cce 100%); */
 
-
 .shop_table {
 	max-block-size: 446px;
 	overflow-y: scroll;
@@ -121,7 +160,7 @@ nav a {
 	display: block;
 }
 
- /* 
+/* 
  * 
  
 .table {
@@ -155,7 +194,7 @@ nav a {
 	color: #ffffff;
 	letter-spacing: 0.4vw;
 	background-color: #8b4343;
-	width:30%;
+	width: 30%;
 	height: 9vw;
 }
 
@@ -196,7 +235,6 @@ nav a {
 	transition: opacity 500ms;
 	opacity: 1;
 	z-index: 77;
-	
 }
 
 .popup {
@@ -231,9 +269,7 @@ nav a {
 }
 .popup .content {
 	max-height: 34%;
-	
 }
-
 
 /* ############################################################################################ */
 
@@ -268,20 +304,19 @@ nav a {
 	text-align: center;
 }
 
-
-
 /* The sidebar menu */
 .sidebar {
 	height: 100%; /* 100% Full-height */
 	width: 0; /* 0 width - change this with JavaScript */
 	position: fixed; /* Stay in place */
-	z-index: 72; 
+	z-index: 72;
 	top: 0;
 	left: 0;
 	background-color: #ffffff;
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 12vw; /* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+	box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar p {
@@ -322,7 +357,6 @@ nav a {
 .sidebar .closebtn:hover {
 	font-size: 4.2em;
 	color: #dfb077;
-
 }
 
 /* The button used to open the sidebar */
@@ -337,9 +371,8 @@ nav a {
 	color: #ffffff;
 	padding: 10px 21px;
 	border: none;
-    z-index: 9;
+	z-index: 9;
 	position: absolute;
-	
 }
 .orderjew {
 	width: 60%;
@@ -361,11 +394,10 @@ nav a {
 
 .jewelbanner {
 	overflow: visible;
-    z-index: 2;
+	z-index: 2;
 	height: 14vw;
 	width: 100%;
 	align-items: center;
-	
 }
 
 .openbtn:hover {
@@ -390,21 +422,17 @@ nav a {
 
 /*  product page   */
 .slider {
-    width:"100%";
+	width: "100%";
 }
 .slider .sl_img {
-    width:"90%";
+	width: "90%";
 }
 
 .slider .sl_l {
 	width: 100%;
-
 }
 
 /* ######################### product page #######################  */
-
-
-
 
 .help {
 	display: none;
@@ -424,11 +452,11 @@ nav a {
 	position: relative;
 	overflow: hidden;
 	background-color: #ffffff;
-	box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.5) 
+	box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.5);
 }
 
 .prod-case .product-image {
-		height: 72%;
+	height: 72%;
 }
 
 .product-category {
@@ -458,7 +486,6 @@ nav a {
 	border-radius: 12px;
 	margin: 1vw 1vw 1vw;
 	box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.2);
-	
 }
 
 .product-image {
@@ -469,8 +496,6 @@ nav a {
 	border-radius: 9px;
 	align-self: center;
 	justify-self: center;
-	
-	
 }
 
 .product-thumb {
@@ -515,7 +540,6 @@ nav a {
 	line-height: 2vw;
 	width: 100%;
 	height: 26%;
-	
 }
 
 .product-brand {

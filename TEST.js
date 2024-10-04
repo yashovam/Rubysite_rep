@@ -3,17 +3,17 @@
 
 //  0 'id',  1 'iname' ,2 'Material' , 3 'Carat' , 4 'description', 5 'Color' , 6 'Clarity' , 7 'price' , 8 'function()' , 9 ['images'], 10 'Silk', 11 'cut', 12 'lengthy description'
 const rubies = [
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
-	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/ 2.jpg','images/1/ 3.jpg','images/1/ 4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[2, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
+	[1, 'crimson tear', 'ruby', 2.1, 'description in few lines of text like this', '#32f00', 2, 999, '/gems/1.html',['images/1/1.jpg','images/1/2.jpg','images/1/3.jpg','images/1/4.jpg'],3, 'cut', 'lengthy description here insert alot of text here if needed like maybe multiline comments.' ],
 ];
 
 var filters = [];
@@ -21,24 +21,17 @@ var filters = [];
 /* >-----------------------------------<><><><><> Functions <><><><><>-----------------------------------< */
 
 function im_list(liist) {
-	
-	let imgal = '';
-	
-		liist.forEach((imm, nu) => {
+	let imgal = '<div class="carousel-container"><div class="carousel">';
+	liist.forEach((imm, nu) => {
+		
+		if (imm && imm.trim() !== '') {
+			imgal += (`<img class="product-im9" src="${imm.trim()}" alt='${nu}' style="width:90%" />`);
+		}
+	});
+	imgal += ('</div></div>');
+	return imgal;
+}
 
-			imgal += (`
-
-				<div >
-				<img src="${imm}" alt='${nu}' style="width:90%" />
-
-				</div>
-				
-				`);
-
-
-		});
-		return imgal;
-	}
 
 function sort_f(items,filter) {
 
@@ -137,10 +130,12 @@ function gen() {
 /* >-----------------------------------<><><><><>o<><><><><>-----------------------------------< */
 
 document.addEventListener("DOMContentLoaded", function() {
-	gen();
+    gen();
+
 });
 
 /* >-----------------------------------<><><><><>o<><><><><>-----------------------------------< */
+
 
 let aa = false;
 document.getElementById("submit").addEventListener("click", () => {
